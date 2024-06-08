@@ -1,4 +1,4 @@
-A student project to create a web application based on a neural network for text recognition for color blindness. 
+A student project to create a web application based on a neural network for intelligent adjustment of Ishihara plates for diagnosis of the type of color blindness. 
 
 Pretrained models and data can be found [here](https://drive.google.com/drive/folders/16ozmXSO1rwNnQABr3Upd2CmUa8xJh6Ia?usp=drive_link)
 

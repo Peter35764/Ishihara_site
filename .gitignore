@@ -1,0 +1,15 @@
+.history
+.ipynb*
+.vscode
+*.pyc
+app/__pycache__/
+__pycache__/
+db/__pycache__/
+*.ipynb
+*.pem
+*.cfg
+!logging.cfg
+!.gitkeep
+venv
+.venv
+.idea/

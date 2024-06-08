@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}"/>
+    <style>
+        .result-container {
+            margin-top: 15px;
+        }
+        .home-button {
+            margin-top: 15px;
+        }
+        .congratulations-message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Спасибо за прохождение теста!</h1>
+
+    <div class="result-container">
+        {% if dalton_type == -1 %}
+            Поздравляем! У вас нет цветовой слепоты! Вы можете пройти тест снова для большей точности.
+        {% elif percentage > 0 %}
+            Ваш самый вероятный вид дальтонизма: {{ dalton_type }}.
+        {% else %}
+            Не удалось выявить ваш вид дальтонизма. Попробуйте пройти тест еще раз.
+        {% endif %}
+    </div>
+
+    <form action="/" method="get">
+        <button type="submit" class="home-button">На главную</button>
+    </form>
+</body>
+</html>

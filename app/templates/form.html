@@ -1,0 +1,27 @@
+<!-- form.html -->
+<!-- jinja_image_path: str-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}"/>
+</head>
+<body>
+    <img src="{{jinja_image_path}}" alt="image bugged :(" class="plate-image">
+
+    {% if session.stage2 %}
+        <div class="hypothesis-check">Проверка гипотезы</div>
+    {% endif %}
+
+    <h2>Введите правильный ответ:</h2>
+
+    <form action="/process_answer" method="post">
+        <label for="answer">Ответ:</label>
+        <input type="text" id="answer" name="answer"><br>
+        <button type="submit" class="answer-button">Отправить ответ</button>
+    </form>
+</body>
+</html>

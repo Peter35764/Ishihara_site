@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"/>
+</head>
+<body>
+    <h1 class="header">Тест Ишихары</h1>
+
+    <div class="content">
+        <div class="description">Добро пожаловать на наш сайт для тестирования на дальтонизм при помощи теста Ишихары. Здесь вы можете проверить свою способность различать цвета и определить, есть ли у вас дальтонизм. Наш тест предлагает несколько заданий, которые помогут определить вашу чувствительность к определенным цветам. После завершения теста будет построена гипотеза о виде вашего дальтонизма, которая будет проверена на второй итерации теста. Пройдите тест прямо сейчас, чтобы узнать больше о своих способностях в восприятии цвета.</div>
+
+        <form action="/form" method="get">
+            <button type="submit" class="open-form-button">Начать тестирование</button>
+        </form>
+    </div>
+
+    <div class="powered-by">
+        powered by:
+        <div class="avatars">
+            <div id="petar">
+                Петр Соловьев (WEB)
+                <a href="https://github.com/Peter35764/">https://github.com/Peter35764/</a>
+            </div>
+            <a href="https://github.com/Peter35764/">
+                <img src="https://avatars.githubusercontent.com/u/90093462?v=4" class="ava"/>
+            </a>
+            <a href="https://github.com/V13kv/">
+                <img src="https://avatars.githubusercontent.com/u/89425316?v=4" class="ava"/>
+            </a>
+            <div id="vlad">
+                Владислав Скворцов (ML)
+                <a href="https://github.com/V13kv/">https://github.com/V13kv/</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
